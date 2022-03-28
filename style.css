@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+
+  --Bright-range: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  /* Fonts */
+
+  --Heading: "Big Shoulders Display", sans-serif;
+  --paragraph: "Lexend Deca", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  display: inline-block;
+}
+
+main {
+  width: 328px;
+  height: 1330px;
+  display: grid;
+  place-items: center;
+  margin: 80px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.section {
+  width: 328px;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.section h1 {
+  margin: 30px 0;
+  font-family: var(--Heading);
+  font-weight: 700;
+  color: var(--Very-light-gray);
+}
+
+.section p {
+  margin: 30px 0;
+  line-height: 25px;
+  font-family: var(--paragraph);
+  color: var(--Transparent-white);
+}
+
+.container {
+  width: 239px;
+  height: 347px;
+}
+
+.section-1 {
+  background-color: var(--Bright-range);
+}
+
+.section-1 button {
+  color: var(--Bright-range);
+}
+
+.section-2 {
+  background-color: var(--Dark-cyan);
+}
+
+.section-2 button {
+  color: var(--Dark-cyan);
+}
+
+.section-3 {
+  background-color: var(--Very-dark-cyan);
+}
+
+.section-3 button {
+  color: var(--Very-dark-cyan);
+}
+
+button {
+  border: none;
+  display: inline-block;
+  background-color: var(--Very-light-gray);
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 35px;
+  font-family: var(--paragraph);
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid var(--Very-light-gray);
+  background-color: transparent;
+  transition: all 0.2s ease;
+  color: var(--Very-light-gray);
+}
+
+footer {
+  position: relative;
+  /* bottom: 0;
+  width: 100%; */
+}
+
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 90%;
+  }
+
+  .section {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    height: 500px;
+    width: auto;
+  }
+
+  .section {
+    width: 328px;
+    min-height: 500px;
+  }
+
+  .container {
+    width: 211px;
+    height: 406px;
+  }
+
+  button {
+    margin-top: 55px;
+  }
+}
